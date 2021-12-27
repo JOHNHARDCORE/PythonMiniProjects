@@ -10,25 +10,25 @@ def exit_game():
 
 # function that displays end of game message
 def display_stats(gave_up, num_tries, answer):
-	msg = f'You gave up! The answer was {answer}' if gave_up else f'You won!'
+  msg = f'You gave up! The answer was {answer}' if gave_up else f'You won!'
 
-	print(msg)
-	print(f'Number of tries: {num_tries}')
-	
-	return True
+  print(msg)
+  print(f'Number of tries: {num_tries}')
+  
+  return True
 
 def play_game():
   random_num = 1 + randrange(0, 99)
   found = False
   last_guess = None
-	num_tries = 0
+  num_tries = 0
 
   while not found:
     if last_guess:
       print(f'Last Guess: {last_guess}')
-		
-		if num_tries > 0:
-			print(f'Number of tries: {num_tries}')
+    
+    if num_tries > 0:
+      print(f'Number of tries: {num_tries}')
 
     guess = int(input(('What is your guess (1 - 100) (-1 to give up): ')))
 
@@ -36,7 +36,7 @@ def play_game():
       found = display_stats(true, num_tries, random_num)
       return
 
-		num_tries += 1
+    num_tries += 1
     if guess == random_num:
       found = display_stats(true, num_tries, random_num)
       return
