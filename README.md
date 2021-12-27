@@ -1,0 +1,2 @@
+# PythonMiniProjects
+Small python projects!
