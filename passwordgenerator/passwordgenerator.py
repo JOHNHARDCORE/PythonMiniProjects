@@ -36,4 +36,4 @@ chosen_letters = [random.choice(letters) for x in range(remaining_chars)]
 password.extend(chosen_letters)
 random.shuffle(password)
 print("Your random password is:")
-print(''.join(password)
+print(''.join(password))
